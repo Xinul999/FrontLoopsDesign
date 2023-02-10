@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Loop 2 - Step 2</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <!--
+    FYI:
+    Textarea resize in the design is a native feature of browsers.
+    Also there is no close icon in the assets, so you should try to find another way of implementing it.
+  -->
+  <div class="container">
+      <article>
+        <header>
+          <div class="flex-container-center">
+            <h2>account settings</h2>
+            <a class="close" href="#"></a>
+          </div>
+        </header>
+        <main>
+          <div>
+            <form>
+              <div>
+                <label>username</label>
+                <input name="username" type="text" placeholder="Enter your username" />
+                <div class="line"></div>
+              </div>
+              <div class="grid-container">
+                <div>
+                  <label>first name</label>
+                  <input name="firstname" type="text" placeholder="Enter your first name" />
+                </div>
+                <div>
+                  <label>last name</label>
+                  <input name="lastname" type="text" placeholder="Enter your last name" />
+                </div>
+              </div>
+              <div>
+                <label>email</label>
+                <input name="email" type="email" placeholder="Enter your email" />
+                <div class="line"></div>
+              </div>
+              <div>
+                <label>bio</label>
+                <textarea placeholder="Tell us about yourself"></textarea>
+              </div>
+              <img src="img/avatar.jpg"  alt="avatar"/>
+            </form>
+          </div>
+        </main>
+        <footer>
+          <button>cancel</button>
+          <button>save</button>
+        </footer>
+      </article>
+  </div>
+</body>
+</html>

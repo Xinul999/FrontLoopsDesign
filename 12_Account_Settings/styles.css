@@ -1,0 +1,204 @@
+:root{
+    --bg-color: #2f2f2f;
+    --bg-card-color: #fae950;
+    --container-size: 30vw;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--bg-color);
+    font-family: Roboto, sans-serif;
+}
+
+.container{
+    margin-block-start: 5vh;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    background-color: var(--bg-card-color);
+    max-width: var(--container-size);
+}
+
+article{
+    padding: 3em 3.5em 1em;
+}
+
+
+.flex-container{
+    display: flex;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-content: space-between;
+}
+.flex-container-center{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.grid-container:not(:focus-within){
+   border-bottom: 1px solid rgba(0, 0, 0, 0.35);
+}
+.grid-container:focus-within{
+    border-bottom: 1px solid rgba(0, 0, 0, 1);
+}
+main{
+    width: calc(var(--container-size) + 30px);
+    margin-block-start: 100px; /* size-image*/
+}
+
+h2{
+    font-size: 1.6em;
+    font-weight: 400;
+}
+
+h2::first-letter{
+    text-transform: capitalize;
+}
+
+.close{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 24px;
+    width: 24px;
+    opacity: 0.45;
+}
+
+.close:hover{
+    opacity: 1;
+}
+
+.close::before{
+    display: inline-block;
+    content: "";
+    width: 3px;
+    height: 100%;
+    background-color: black;
+    rotate: 45deg;
+    transform: translateX(2px);
+}
+
+.close::after{
+    display: inline-block;
+    content: "";
+    width: 3px;
+     height: 100%;
+    background-color: black;
+    rotate: -45deg;
+    transform: translateX(-2px);
+}
+
+main > div{
+    position: relative;
+    /*margin-block-start: 5em;*/
+}
+
+img{
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    z-index: 100;
+    top: -50px;
+    left: 50px;
+}
+form{
+    position: relative;
+    box-shadow: -2px 12px 15px 0 rgba(0,0,0,0.35);
+    background-color: white;
+    padding: 5em 2em 2em;
+}
+
+label{
+    display: block;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.35);
+    font-weight: 500;
+}
+
+form > div + div{
+    margin-top: 1em;
+}
+
+input{
+    border : 0;
+    outline: 0;
+    padding-bottom: 0.5em;
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    font-size: 1.05em;
+}
+
+input[name="firstname"], input[name="lastname"]{
+    max-width: 170px;
+}
+label + input{
+    margin-top: 0.5em;
+}
+
+.line{
+    width: 100%;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.35);
+}
+
+input:focus + .line{
+    background-color: rgba(0, 0, 0, 1);
+}
+
+input:active{
+    font-weight: 600;
+}
+
+input::placeholder, textarea::placeholder{
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+}
+label + textarea{
+    margin-block-start: 1em;
+}
+textarea{
+    width: 100%;
+    overflow: auto;
+    resize: vertical;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    outline: 0;
+    height: 100px;
+    font-size: 1.05em;
+    font-family: Roboto, sans-serif;
+}
+
+footer{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 2em;
+}
+button{
+    border: 0;
+    outline: 0;
+    text-transform: capitalize;
+    color: rgba(0, 0, 0, 0.65);
+    cursor: pointer;
+    background-color: var(--bg-card-color);
+    font-size: 1.18em;
+    font-weight: 500;
+}
+
+button + button{
+    margin-left: 2em;
+}
+
+button:hover{
+     color: rgba(0, 0, 0, 1);
+}
