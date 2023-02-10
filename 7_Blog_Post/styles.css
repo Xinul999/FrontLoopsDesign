@@ -1,0 +1,143 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f2ce97;
+    font-family: Roboto, sans-serif;
+}
+
+.container{
+    margin: 100px auto;
+    max-width: 1145px;
+}
+
+.root{
+    display: flex;
+}
+
+
+.padding{
+    padding: 55px 60px;
+}
+.item-left{
+    position: relative;
+    background-color: #484956;
+    flex-basis: 35%;
+}
+
+.item-right{
+    background-color: white;
+    flex-basis: 60%;
+}
+
+h1,h2{
+    color: white;
+}
+
+h1{
+    font-weight: 600;
+    font-size: 30px;
+}
+h2{
+    font-weight: normal;
+    font-size: 28px;
+}
+h2::after{
+    content: "";
+    height: 4px;
+    width: 55px;
+    background-color: #e37b62;
+    display: block;
+    margin-top: 12px;
+}
+
+.item-right div.padding p:first-of-type::first-letter{
+    text-transform: uppercase;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.item-right .padding{
+    font-size: 22px;
+    font-weight: 100;
+}
+
+.pb-32{
+    padding-bottom: 32px;
+}
+
+.p-absolute{
+    position: absolute;
+    top: 80%;
+}
+.p-absolute div{
+    display: flex;
+    align-items: center;
+}
+
+.p-absolute div p{
+    margin-left: 20px;
+    color: white;
+    font-size: 18px;
+}
+
+img{
+    border-radius: 50%;
+    height: 64px;
+    width: 64px;
+    box-shadow: 0 8px 18px black;
+}
+
+.flex-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.padding-35-70{
+    padding: 35px 70px;
+}
+
+.blur {
+   box-shadow: 0 -5px 12px rgba(0,0,0, 0.05);
+}
+.padding-35-70 > *{
+    font-size: 16px;
+}
+.padding-35-70 p:first-of-type{
+    font-weight: 100;
+}
+strong{
+    font-weight: 600;
+}
+
+.opacity-grey{
+    opacity: 0.3;
+}
+
+.flex-container p.opacity-grey{
+    font-weight: 600;
+    margin-left: 12px;
+    margin-right: 22px;
+}
+
+.comment{
+    background-image: url("img/comment.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 25px;
+    height: 25px;
+}
+
+.more{
+    background-image: url("img/more.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 25px;
+    height: 25px;
+}
+
+
+
