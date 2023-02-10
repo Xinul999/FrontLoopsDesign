@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Loop 2 - Step 3</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css"/>
+    <script>
+        window.addEventListener("DOMContentLoaded", () => {
+            let divCollapse = document.querySelector('[data-collapse]');
+            let divHidden = document.querySelector('[data-hidden]');
+            divCollapse.addEventListener("click", event => {
+                const current = event.target || event.currentTarget;
+                const tag = current.tagName.toLowerCase();
+                const dataSetCollapse = (tag === "div") ? current.dataset : current.parentElement.dataset;
+                const states = dataSetCollapse.collapse;
+                dataSetCollapse.collapse = (states === "false") ? "true" : "false";
+                divHidden.dataset.hidden = (states === "true") ? "true" : "false";
+            });
+        });
+
+    </script>
+</head>
+<body>
+  <div class="container">
+        <article>
+            <header>
+                <div>
+                    <div class="image-size d-flex align-center">
+                        <img src="img/photo.svg" alt="photo" />
+                        <span>photos</span>
+                    </div>
+                    <div data-collapse="true">
+                        <img class="image-size" src="img/arrow.svg" alt="arrow"/>
+                    </div>
+                </div>
+            </header>
+            <main data-hidden="false">
+                <ul>
+                    <li>holidays</li>
+                    <li>berlin</li>
+                    <li>summer Vacation</li>
+                </ul>
+            </main>
+            <footer>
+                <div class="image-size d-flex align-center">
+                    <img src="img/folder.svg" alt="folder" />
+                    <span>files</span>
+                </div>
+            </footer>
+        </article>
+  </div>
+</body>
+</html>
