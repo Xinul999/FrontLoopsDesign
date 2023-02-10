@@ -1,0 +1,19 @@
+
+.btn-color{
+    color: rgba(234, 98, 92, 1);
+}
+
+button{
+    outline: 0;
+    border: 0;
+    color: white;
+    padding: 10px 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: rgba(234, 98, 92, 1);
+}
+
+
+button:hover{
+    background-color: rgb(206, 48, 39, 1);
+}
