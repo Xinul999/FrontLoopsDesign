@@ -1,6 +1,4 @@
-:root{
-    --height: 12vh;
-}
+
 *{
     box-sizing: border-box;
     padding: 0;
@@ -16,7 +14,7 @@ ul{
     list-style: none;
     display: flex;
     align-items: center;
-    height: var(--height);
+    height: 100px;
 }
 
 ul > li:first-child{
@@ -65,8 +63,12 @@ li.info:hover::after{
     background-color: rgba(0,0,0, 0.35);
 }
 
+main{
+    overflow: hidden;
+}
 .content{
-    height: calc(99vh - var(--height));
+    position: relative;
+    height: 100vh;
 }
 .border-bottom{
     border-bottom: 1px solid rgba(0, 0, 0, 0.35);
@@ -83,7 +85,6 @@ li.info:hover::after{
 }
 .larger-w-480{
     max-width: 480px;
-    overflow: hidden;
 }
 
 .paragraph{
@@ -92,6 +93,7 @@ li.info:hover::after{
     font-weight: 500;
     line-height: 1.5rem;
 }
+
 
 .border-color-paragraph{
     border-left: 2px solid rgba(0, 0, 0, 0.35);
@@ -118,7 +120,11 @@ h1{
 }
 
 .image-watch{
-    height: 100%;
+    position: absolute;
+    right: -20%;
+    max-width: 60%;
+    height: 99.9vh;
+    object-fit: cover;
 }
 
 .uppercase{
@@ -203,4 +209,3 @@ p + .btn-color{
 .larger-w-480.position-absolute h1{
     color: white;
 }
-
